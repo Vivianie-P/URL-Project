@@ -1,25 +1,195 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import React from "react";
+import HeaderImage from "./images/illustration-working.svg";
+import NavbarLogo from "./images/logo.svg";
+import BrandRecognition from "./images/icon-brand-recognition.svg";
+import DetailedRecords from "./images/icon-detailed-records.svg";
+import Customizable from "./images/icon-fully-customizable.svg";
+import BackgroundShorten1 from "./images/bg-shorten-mobile.svg";
+import BackgroundShorten2 from "./images/bg-shorten-desktop.svg";
+import BGBoost1 from "./images/bg-boost-mobile.svg";
+import BGBoost2 from "./images/bg-boost-desktop.svg";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import axios from "axios";
+import { useState, useEffect } from "react";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const axios = require("axios");
+
+	const headers = {
+		"Content-Type": "application/json",
+		apikey: process.env.REACT_APP_API_KEY,
+	};
+
+	const fetchShortenUrlData = async (url) => {
+		let endpoint = "https://api.rebrandly.com/v1/links";
+		let linkRequest = {
+			destination: url,
+			domain: { fullName: "rebrand.ly" },
+		};
+		const apiCall = {
+			method: "post",
+			url: endpoint,
+			data: linkRequest,
+			headers: headers,
+		};
+		let apiResponse = await axios(apiCall);
+		let link = apiResponse.data;
+		return link.shortUrl;
+	};
+
+	let shortUrl = fetchShortenUrlData(
+		"https://www.youtube.com/channel/UCHK4HD0ltu1-I212icLPt3g"
+	);
+	console.log(shortUrl);
+
+	return (
+		<div className="App">
+			<div className="container">
+				<div className="header">
+					<div className="mobile-nav">
+						<img src={NavbarLogo} alt="main logo" className="navbar-logo" />
+						<Router>
+							<Navbar />
+						</Router>
+					</div>
+					<div className="header-img-container">
+						<img src={HeaderImage} alt="illustration" className="header-img" />
+					</div>
+					<h1 className="header-title">More than just shorter links</h1>
+					<p className="header-ppg">
+						{" "}
+						Build your brand’s recognition and get detailed insights on how your links
+						are performing.
+					</p>
+					<div className="header-btn-container">
+						<button className="header-btn">Get Started</button>
+					</div>
+				</div>
+
+				<div className="main">
+					<div className="primary-main">
+						<img src={BackgroundShorten1} alt="" className="mobile-shorten-bg" />
+						<img src={BackgroundShorten2} alt="" className="desktop-shorten-bg" />
+						<div className="input-btn-container">
+							<div className="input-container">
+								<input
+									type="text"
+									className="main-input"
+									placeholder="Shorten a link here..."
+								/>
+							</div>
+							<div className="button-container">
+								<button className="main-btn">Shorten It!</button>
+							</div>
+						</div>
+					</div>
+
+					<div className="secondary-main">
+						<h1 className="sm-title">Advanced Statistics</h1>
+						<p className="sm-ppg">
+							Track how your links are performing across the web with our advanced
+							statistics dashboard.
+						</p>
+
+						<div className="first-ppg">
+							<img className="first-ppg-img" src={BrandRecognition} alt="" />
+							<h1 className="ppg-title">Brand Recognition</h1>
+							<p className="ppg">
+								Boost your brand recognition with each click. Generic links don’t mean a
+								thing. Branded links help instil confidence in your content.
+							</p>
+						</div>
+
+						<div className="second-ppg">
+							<div className="upper-img"></div>
+							<img className="second-ppg-img" src={DetailedRecords} alt="" />
+							<h1 className="ppg-title">Detailed Records</h1>
+							<p className="ppg">
+								Gain insights into who is clicking your links. Knowing when and where
+								people engage with your content helps inform better decisions.
+							</p>
+						</div>
+
+						<div className="third-ppg">
+							<div className="upper-img"></div>
+							<img className="third-ppg-img" src={Customizable} alt="" />
+							<h1 className="ppg-title">Fully Customizable</h1>
+							<p className="ppg">
+								Improve brand awareness and content discoverability through customizable
+								links, supercharging audience engagement.
+							</p>
+						</div>
+					</div>
+				</div>
+				<div className="footer-1">
+					<img src={BGBoost1} alt="" className="mobile-boost-bg" />
+					<img src={BGBoost2} alt="" className="desktop-boost-bg" />
+					<div className="footer-1-title-container">
+						<h1 className="footer-1-title">Boost your links today</h1>
+					</div>
+					<div className="footer-1-btn-container">
+						<button className="footer-1-btn">Get Started</button>
+					</div>
+				</div>
+				<div className="footer-2">
+					<h1 className="footer-2-title">Shortly</h1>
+					<div className="footer-2-info">
+						<h1 className="footer-2-info-titles">Features</h1>
+						<div className="footer-2-ppg">
+							<h2 className="footer-ppg">Link Shortening</h2>
+							<h2 className="footer-ppg">Branded Links</h2>
+							<h2 className="footer-ppg">Analytics</h2>
+						</div>
+					</div>
+					<div className="footer-2-info">
+						<h1 className="footer-2-info-titles">Resources</h1>
+						<div className="footer-2-ppg">
+							<h2 className="footer-ppg">Blog</h2>
+							<h2 className="footer-ppg">Developers</h2>
+							<h2 className="footer-ppg">Support</h2>
+						</div>
+					</div>
+					<div className="footer-2-info">
+						<h1 className="footer-2-info-titles">Company</h1>
+						<div className="footer-2-ppg">
+							<h2 className="footer-ppg">About</h2>
+							<h2 className="footer-ppg">Our Team</h2>
+							<h2 className="footer-ppg">Careers</h2>
+							<h2 className="footer-ppg">Contact</h2>
+						</div>
+					</div>
+					<div className="footer-2-socials">
+						<svg className="facebook-icon" xmlns="http://www.w3.org/2000/svg">
+							<path
+								fill="#FFF"
+								d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.593 1.323-1.325V1.325C24 .593 23.407 0 22.675 0z"
+							/>
+						</svg>
+						<svg className="twitter-icon" xmlns="http://www.w3.org/2000/svg">
+							<path
+								fill="#FFF"
+								d="M24 2.557a9.83 9.83 0 01-2.828.775A4.932 4.932 0 0023.337.608a9.864 9.864 0 01-3.127 1.195A4.916 4.916 0 0016.616.248c-3.179 0-5.515 2.966-4.797 6.045A13.978 13.978 0 011.671 1.149a4.93 4.93 0 001.523 6.574 4.903 4.903 0 01-2.229-.616c-.054 2.281 1.581 4.415 3.949 4.89a4.935 4.935 0 01-2.224.084 4.928 4.928 0 004.6 3.419A9.9 9.9 0 010 17.54a13.94 13.94 0 007.548 2.212c9.142 0 14.307-7.721 13.995-14.646A10.025 10.025 0 0024 2.557z"
+							/>
+						</svg>
+						<svg className="pinterest-icon" xmlns="http://www.w3.org/2000/svg">
+							<path
+								fill="#FFF"
+								d="M12 0C5.373 0 0 5.372 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 01.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z"
+							/>
+						</svg>
+						<svg className="instagram-icon" xmlns="http://www.w3.org/2000/svg">
+							<path
+								fill="#FFF"
+								d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"
+							/>
+						</svg>
+					</div>
+				</div>
+			</div>
+		</div>
+	);
 }
 
 export default App;
