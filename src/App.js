@@ -9,20 +9,8 @@ import LowerLevelContent from "./components/LowerLevelContent";
 import Boost from "./components/Boost";
 import Footer from "./components/Footer";
 import { useState, useEffect } from "react";
-import LinkResult from "./components/LinkResult";
 
 function App() {
-	// const fetchShortenUrlData = async (url) => {
-	// 	fetch(`https://api.shrtco.de/v2/shorten?url=${url}`, {
-	// 		method: "POST",
-	// 	});
-	// };
-
-	// let shortUrl = fetchShortenUrlData(
-	// 	"https://www.youtube.com/channel/UCHK4HD0ltu1-I212icLPt3g"
-	// );
-	// console.log(shortUrl);
-
 	return (
 		<div className="App">
 			<div className="header">
@@ -35,7 +23,6 @@ function App() {
 			</div>
 			<MainContent />
 			<Shortener />
-			<LinkResult />
 			<LowerLevelContent />
 			<Boost />
 			<Footer />

@@ -1,12 +1,12 @@
 import React from "react";
 import "./Shortener.css";
-import EmailValidator from "email-validator";
 import { useState, useEffect } from "react";
 import BackgroundShorten1 from "./images/bg-shorten-mobile.svg";
 import BackgroundShorten2 from "./images/bg-shorten-desktop.svg";
 
 function Shortener() {
 	const [text, setText] = useState("");
+	const [links, setLinks] = useState([]);
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
@@ -19,7 +19,9 @@ function Shortener() {
 					method: "POST",
 				});
 				const data = await res.json();
-				console.log(data);
+				console.log(data.result);
+				setLinks(data.result);
+				setText("");
 			};
 			fetchShortenUrlData();
 		}
@@ -41,14 +43,30 @@ function Shortener() {
 								onChange={(e) => setText(e.target.value)}
 							/>
 						</div>
-					</div>
-					<div className="button-container">
-						<button className="shorten-btn" onClick={handleSubmit}>
-							Shorten It!
-						</button>
+						<div className="button-container">
+							<button className="shorten-it-btn" onClick={handleSubmit}>
+								Shorten It!
+							</button>
+						</div>
 					</div>
 				</div>
 			</form>
+
+			<div className="full-links">
+				<div className="original-link">
+					<h3>{links.original_link}</h3>
+				</div>
+				<div className="shortened-link-and-btn">
+					<ul className="list">
+						<li>
+							<button className="shortened-link">{links.full_short_link}</button>
+						</li>
+						<li>
+							<button className="shortened-btn">Copy</button>
+						</li>
+					</ul>
+				</div>
+			</div>
 		</div>
 	);
 }
