@@ -28,8 +28,8 @@ function Shortener() {
 	};
 
 	return (
-		<div className="form-container">
-			<form action="" onSubmit={handleSubmit}>
+		<div className="container">
+			<form className="form-container" action="" onSubmit={handleSubmit}>
 				<div className="shorten-info-container">
 					<img src={BackgroundShorten1} alt="" className="mobile-shorten-bg" />
 					<img src={BackgroundShorten2} alt="" className="desktop-shorten-bg" />
@@ -42,8 +42,6 @@ function Shortener() {
 								value={text}
 								onChange={(e) => setText(e.target.value)}
 							/>
-						</div>
-						<div className="button-container">
 							<button className="shorten-it-btn" onClick={handleSubmit}>
 								Shorten It!
 							</button>
@@ -61,7 +59,7 @@ function Shortener() {
 						<li>
 							<button className="shortened-link">{links.full_short_link}</button>
 						</li>
-						<li>
+						<li className="shortened-btn-container">
 							<button className="shortened-btn">Copy</button>
 						</li>
 					</ul>

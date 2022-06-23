@@ -5,29 +5,31 @@ function Footer() {
 	return (
 		<div className="footer-container">
 			<h1 className="footer-title">Shortly</h1>
-			<div className="footer-info">
-				<h1 className="footer-info-title">Features</h1>
-				<div className="footer-ppg">
-					<h2 className="footer-ppg">Link Shortening</h2>
-					<h2 className="footer-ppg">Branded Links</h2>
-					<h2 className="footer-ppg">Analytics</h2>
+			<div className="main-footer-info">
+				<div className="footer-info">
+					<h1 className="footer-info-title">Features</h1>
+					<div className="footer-ppg">
+						<h2 className="footer-ppg">Link Shortening</h2>
+						<h2 className="footer-ppg">Branded Links</h2>
+						<h2 className="footer-ppg">Analytics</h2>
+					</div>
 				</div>
-			</div>
-			<div className="footer-info">
-				<h1 className="footer-info-title">Resources</h1>
-				<div className="footer-ppg">
-					<h2 className="footer-ppg">Blog</h2>
-					<h2 className="footer-ppg">Developers</h2>
-					<h2 className="footer-ppg">Support</h2>
+				<div className="footer-info">
+					<h1 className="footer-info-title">Resources</h1>
+					<div className="footer-ppg">
+						<h2 className="footer-ppg">Blog</h2>
+						<h2 className="footer-ppg">Developers</h2>
+						<h2 className="footer-ppg">Support</h2>
+					</div>
 				</div>
-			</div>
-			<div className="footer-info">
-				<h1 className="footer-info-title">Company</h1>
-				<div className="footer-ppg">
-					<h2 className="footer-ppg">About</h2>
-					<h2 className="footer-ppg">Our Team</h2>
-					<h2 className="footer-ppg">Careers</h2>
-					<h2 className="footer-ppg">Contact</h2>
+				<div className="footer-info">
+					<h1 className="footer-info-title">Company</h1>
+					<div className="footer-ppg">
+						<h2 className="footer-ppg">About</h2>
+						<h2 className="footer-ppg">Our Team</h2>
+						<h2 className="footer-ppg">Careers</h2>
+						<h2 className="footer-ppg">Contact</h2>
+					</div>
 				</div>
 			</div>
 			<div className="footer-socials">

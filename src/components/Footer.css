@@ -20,7 +20,7 @@
 .footer-title {
 	font-family: "Poppins", sans-serif;
 	font-weight: 700;
-	font-size: 2.5rem;
+	font-size: 2.3rem;
 }
 
 .footer-info-title {
@@ -66,4 +66,54 @@ svg:hover path {
 .instagram-icon {
 	width: 12%;
 	height: 4.37rem;
+}
+
+@media screen and (min-width: 600px) {
+	.footer-container {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: flex-start;
+		padding: 5rem;
+		height: 20rem;
+		text-align: left;
+	}
+
+	.footer-title {
+		display: flex;
+		justify-content: center;
+		height: 5rem;
+		margin: 0;
+	}
+
+	.main-footer-info {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-evenly;
+		align-items: flex-start;
+		width: 50%;
+		margin-left: 10rem;
+	}
+
+	.footer-info {
+		margin: 0;
+		height: 10rem;
+	}
+
+	.footer-info-title {
+		font-size: 1.38rem;
+	}
+
+	.footer-ppg {
+		font-size: 0.75rem;
+	}
+
+	.footer-socials {
+		display: flex;
+		justify-content: space-evenly;
+		margin: 0;
+		height: 3rem;
+		width: 20%;
+		padding-top: 1.5rem;
+	}
 }

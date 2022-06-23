@@ -7,7 +7,7 @@
 	box-sizing: border-box;
 }
 
-.main {
+.ll-container {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -16,6 +16,7 @@
 }
 
 .title {
+	font-size: 1.9rem;
 	font-family: "Poppins", sans-serif;
 	font-weight: 700;
 	color: hsl(260, 8%, 14%);
@@ -52,14 +53,67 @@
 }
 
 .ppg-title {
+	font-size: 1.5rem;
 	font-family: "Poppins", sans-serif;
 	font-weight: 700;
 	color: hsl(260, 8%, 14%);
 }
 
 .ppg {
-	padding: 0 3rem 2.2rem;
+	font-size: 1.1rem;
+	padding: 0 2.2rem 1rem;
 	font-family: "Poppins", sans-serif;
 	font-weight: 500;
 	color: hsl(257, 7%, 63%);
+}
+
+@media screen and (min-width: 600px) {
+	.ll-container {
+		display: flex;
+		flex-direction: row;
+		padding: 3rem;
+		margin-top: 0;
+	}
+
+	.title {
+		font-size: 2.5rem;
+	}
+
+	.header-ppg {
+		margin-bottom: 5rem;
+		padding: 0 22rem 0;
+		font-size: 1.3rem;
+	}
+
+	.ppg-container {
+		display: flex;
+		flex-direction: row;
+		padding: 3rem;
+	}
+
+	.upper-img {
+		display: none;
+	}
+
+	.first-ppg-img,
+	.second-ppg-img,
+	.third-ppg-img {
+		width: 35%;
+		border-radius: 90px;
+		padding: 3rem;
+		background-color: hsl(257, 27%, 26%);
+	}
+
+	.second-ppg {
+		margin-top: 3rem;
+	}
+
+	.third-ppg {
+		margin-top: 6rem;
+	}
+
+	/* .first-ppg,
+	.second-ppg,
+	.third-ppg {
+	} */
 }
