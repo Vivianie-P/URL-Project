@@ -12,8 +12,7 @@
 	margin-top: 2.5rem;
 }
 
-.desktop-shorten-bg,
-.desktop-boost-bg {
+.desktop-shorten-bg {
 	display: none;
 }
 
@@ -132,6 +131,20 @@
 }
 
 @media screen and (min-width: 600px) {
+	.mobile-shorten-bg {
+		display: none;
+	}
+
+	.desktop-shorten-bg {
+		display: flex;
+		position: absolute;
+		margin: 0 auto;
+		width: 85%;
+		border-radius: 10px;
+		background-color: hsl(257, 27%, 26%);
+		height: 10rem;
+	}
+
 	.input-container {
 		display: flex;
 		justify-content: center;

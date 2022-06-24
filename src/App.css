@@ -8,8 +8,9 @@
 }
 
 .App {
-	width: 100%;
+	width: 100vw;
 	background-color: white;
+	overflow-x: hidden;
 }
 
 .container {

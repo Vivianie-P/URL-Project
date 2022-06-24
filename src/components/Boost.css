@@ -41,7 +41,6 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 100%;
 }
 
 .boost-btn {
@@ -65,17 +64,23 @@
 	}
 	.desktop-boost-bg {
 		display: flex;
+		position: absolute;
 		width: 100%;
-		grid-area: 1/1;
+		height: 10.8rem;
 		background-color: hsl(257, 27%, 26%);
 	}
 
 	.boost-title {
 		font-size: 2.2rem;
-		margin-top: 3rem;
+		margin-top: 2rem;
+		z-index: 99;
 	}
 
+	.boost-btn-container {
+		height: 13.2vh;
+	}
 	.boost-btn {
-		width: 15%;
+		width: 20%;
+		z-index: 99;
 	}
 }

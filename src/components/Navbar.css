@@ -92,3 +92,21 @@
 	width: 100%;
 	list-style-type: none;
 }
+
+@media screen and (min-width: 600px) {
+	.desktop-nav {
+		display: flex;
+	}
+
+	.nav-menu-items {
+		flex-direction: row;
+	}
+
+	.nav-text a {
+		color: hsl(260, 8%, 14%);
+	}
+
+	.menu-bars {
+		display: none;
+	}
+}
