@@ -4,9 +4,20 @@ import { useState, useEffect } from "react";
 import BackgroundShorten1 from "./images/bg-shorten-mobile.svg";
 import BackgroundShorten2 from "./images/bg-shorten-desktop.svg";
 
+const getLocalStorage = () => {
+	let links = localStorage.getItem("links");
+
+	if (links) {
+		return JSON.parse(localStorage.getItem("links"));
+	} else {
+		return [];
+	}
+};
+
 function Shortener() {
 	const [text, setText] = useState("");
-	const [links, setLinks] = useState([]);
+	const [links, setLinks] = useState(getLocalStorage());
+	const [copyButtonText, SetCopyButtonText] = useState("Copy");
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
@@ -27,6 +38,15 @@ function Shortener() {
 		}
 	};
 
+	const handleCopy = () => {
+		navigator.clipboard.writeText(links.full_short_link);
+		SetCopyButtonText("Copied!");
+	};
+
+	useEffect(() => {
+		localStorage.setItem("links", JSON.stringify(links));
+	}, [links]);
+
 	return (
 		<div className="container">
 			<form className="form-container" action="" onSubmit={handleSubmit}>
@@ -41,6 +61,7 @@ function Shortener() {
 								placeholder="Shorten a link here..."
 								value={text}
 								onChange={(e) => setText(e.target.value)}
+								// onFocus={(e) => (e.target.placeholder = "")}
 							/>
 							<button className="shorten-it-btn" onClick={handleSubmit}>
 								Shorten It!
@@ -59,8 +80,10 @@ function Shortener() {
 						<li>
 							<button className="shortened-link">{links.full_short_link}</button>
 						</li>
-						<li className="shortened-btn-container">
-							<button className="shortened-btn">Copy</button>
+						<li className="copy-btn-container">
+							<button onClick={handleCopy} className="copy-btn">
+								{copyButtonText}
+							</button>
 						</li>
 					</ul>
 				</div>
@@ -68,18 +91,5 @@ function Shortener() {
 		</div>
 	);
 }
-
-// const fetchShortenUrlData = async (url) => {
-// 	fetch(`https://api.shrtco.de/v2/shorten?url=${url}`, {
-// 		method: "POST",
-// 	});
-// };
-
-// let shortUrl = fetchShortenUrlData(
-// 	"https://www.youtube.com/channel/UCHK4HD0ltu1-I212icLPt3g"
-// );
-// console.log(shortUrl);
-
-// var validtor = { EmailValidator }.validate("test@email.com");
 
 export default Shortener;

@@ -57,6 +57,14 @@
 	z-index: 99;
 }
 
+.input,
+textarea {
+	font-size: 1.2rem;
+	font-family: "Poppins", sans-serif;
+	font-weight: 500;
+	color: hsl(260, 8%, 14%);
+}
+
 ::placeholder {
 	display: flex;
 	align-items: center;
@@ -73,7 +81,7 @@
 }
 
 .shorten-it-btn,
-.shortened-btn {
+.copy-btn {
 	background-color: hsl(180, 66%, 49%);
 	color: white;
 	font-family: "Poppins", sans-serif;
@@ -89,16 +97,17 @@
 	margin: 0 auto;
 	width: 85%;
 	list-style-type: none;
+	/* box-shadow: 5px 10px 8px 10px #888888; */
 }
 
 .original-link {
 	font-size: 1rem;
 	font-family: "Poppins", sans-serif;
-	font-weight: 500;
+	font-weight: 200;
 	cursor: pointer;
 	padding-left: 20px;
 	height: 58px;
-	border-bottom: 0.5px solid hsl(0, 0%, 75%);
+	color: hsl(260, 8%, 14%);
 }
 
 .shortened-link {
@@ -112,16 +121,20 @@
 	color: hsl(180, 66%, 49%);
 }
 
-.shortened-btn-container {
+.copy-btn-container {
 	display: flex;
 	justify-content: center;
 }
 
-.shortened-btn {
+.copy-btn {
 	margin-top: 10px;
 	font-size: 1.2rem;
 	width: 90%;
 	height: 2.8rem;
+}
+
+.copy-btn:focus {
+	background-color: hsl(257, 27%, 26%);
 }
 
 .list {
@@ -180,7 +193,7 @@
 		justify-content: space-between;
 		width: 85%;
 		margin: 0 auto;
-		padding: 3rem 0 0;
+		margin-top: 4rem;
 	}
 
 	.list {
@@ -188,7 +201,21 @@
 		align-items: center;
 	}
 
+	.shortened-link-and-btn {
+		display: flex;
+		justify-content: flex-end;
+		width: 100%;
+	}
+
 	.shortened-link {
 		margin-right: 1.75rem;
+	}
+
+	.copy-btn-container {
+		width: 100%;
+	}
+
+	.copy-btn {
+		width: 100%;
 	}
 }
