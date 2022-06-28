@@ -14,6 +14,7 @@ function LowerLevelContent() {
 					statistics dashboard.
 				</p>
 				<div className="ppg-container">
+					<div className="desktop-img"></div>
 					<div className="first-ppg">
 						<img className="first-ppg-img" src={BrandRecognition} alt="" />
 						<h1 className="ppg-title">Brand Recognition</h1>

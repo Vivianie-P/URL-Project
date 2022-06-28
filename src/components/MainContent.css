@@ -19,10 +19,6 @@
 	width: 100%;
 }
 
-/* .full-content{
-
-} */
-
 .main-img {
 	padding: 1rem;
 	width: 140%;
@@ -71,7 +67,10 @@
 
 @media screen and (min-width: 600px) {
 	.main-content {
-		margin-bottom: 10rem;
+		margin: 0 auto;
+		width: 85%;
+		margin-top: 5rem;
+		margin-bottom: 15rem;
 	}
 
 	.mc-container {
@@ -80,20 +79,21 @@
 
 	.img-container {
 		float: right;
-		width: 45%;
+		width: 40%;
+		margin-right: 3rem;
 	}
 	.main-img {
-		width: 100%;
+		width: 170%;
 	}
 
 	.full-content {
-		margin-left: 5rem;
-		width: 55%;
+		padding: 5rem 5rem 0rem 0;
+		width: 60%;
 	}
 
 	.mc-title {
 		text-align: left;
-		font-size: 5.5rem;
+		font-size: 5rem;
 	}
 
 	.main-ppg {
@@ -108,5 +108,9 @@
 	.main-btn {
 		margin-bottom: 0;
 		width: 40%;
+	}
+
+	.main-btn:hover {
+		background-color: hsl(180, 63%, 77%);
 	}
 }

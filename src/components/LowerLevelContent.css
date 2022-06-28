@@ -73,7 +73,7 @@
 	.ll-container {
 		display: flex;
 		flex-direction: row;
-		padding: 3rem;
+		padding: 3rem 3rem 6rem;
 		margin-top: 0;
 	}
 
@@ -82,7 +82,7 @@
 	}
 
 	.header-ppg {
-		margin-bottom: 5rem;
+		margin-bottom: 2rem;
 		padding: 0 22rem 0;
 		font-size: 1.3rem;
 	}
@@ -90,20 +90,39 @@
 	.ppg-container {
 		display: flex;
 		flex-direction: row;
-		padding: 3rem;
+		padding: 3rem 2rem;
+		position: relative;
 	}
 
 	.upper-img {
 		display: none;
 	}
 
+	.desktop-img {
+		display: flex;
+		position: absolute;
+		top: 48%;
+		right: 380px;
+		height: 0.7rem;
+		width: 40%;
+		background-color: hsl(180, 66%, 49%);
+	}
+
 	.first-ppg-img,
 	.second-ppg-img,
 	.third-ppg-img {
-		width: 35%;
+		background-size: 100%;
+		margin-right: 8rem;
+		width: 20%;
 		border-radius: 90px;
-		padding: 3rem;
+		padding: 0.9rem;
 		background-color: hsl(257, 27%, 26%);
+	}
+
+	.first-ppg,
+	.second-ppg,
+	.third-ppg {
+		z-index: 99;
 	}
 
 	.second-ppg {
@@ -113,9 +132,4 @@
 	.third-ppg {
 		margin-top: 6rem;
 	}
-
-	/* .first-ppg,
-	.second-ppg,
-	.third-ppg {
-	} */
 }

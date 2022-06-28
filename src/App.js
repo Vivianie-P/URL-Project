@@ -14,7 +14,7 @@ function App() {
 	return (
 		<div className="App">
 			<div className="header">
-				<div className="mobile-nav">
+				<div className="full-nav">
 					<img src={NavbarLogo} alt="main logo" className="navbar-logo" />
 					<Router>
 						<Navbar />

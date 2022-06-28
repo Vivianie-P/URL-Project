@@ -56,7 +56,8 @@
 	background-color: hsl(257, 27%, 26%);
 }
 
-.nav-text a {
+.nav-text a,
+.nav-text-primary a {
 	font-family: "Poppins", sans-serif;
 	font-weight: 700;
 	color: white;
@@ -75,7 +76,7 @@
 	text-decoration: none;
 	text-transform: uppercase;
 	background-color: hsl(180, 66%, 49%);
-	background-size: 100% auto;
+	/* background-size: 100% auto; */
 	width: 100%;
 	border-radius: 2rem;
 	font-family: "Poppins", sans-serif;
@@ -96,14 +97,36 @@
 @media screen and (min-width: 600px) {
 	.desktop-nav {
 		display: flex;
+		width: 100%;
 	}
 
 	.nav-menu-items {
+		justify-content: flex-start;
 		flex-direction: row;
 	}
 
+	.nav-text a,
+	.nav-text-primary a {
+		margin-top: 2rem;
+		font-size: 1.3rem;
+		color: hsl(0, 0%, 75%);
+	}
+
 	.nav-text a {
-		color: hsl(260, 8%, 14%);
+		margin-left: 23rem;
+	}
+
+	.nav-link {
+		margin-top: 2rem;
+	}
+
+	.nav-text-primary a :hover,
+	.nav-text a :hover {
+		color: hsl(257, 27%, 26%);
+	}
+
+	.nav-link :hover {
+		background-color: hsl(180, 63%, 77%);
 	}
 
 	.menu-bars {
