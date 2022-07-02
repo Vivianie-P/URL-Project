@@ -65,13 +65,18 @@ function Shortener() {
 								value={text}
 								onChange={(e) => setText(e.target.value)}
 							/>
+							{emptyInputError && (
+								<div className="inputErrorMessageContainerMobile">
+									<h2 className="inputErrorMessageMobile">Please add a link</h2>
+								</div>
+							)}
 							<button className="shorten-it-btn" onClick={handleSubmit}>
 								Shorten It!
 							</button>
 						</div>
 						{emptyInputError && (
-							<div className="inputErrorMessageContainer">
-								<h2 className="inputErrorMessage">Please add a link</h2>
+							<div className="inputErrorMessageContainerDesktop">
+								<h2 className="inputErrorMessageDesktop">Please add a link</h2>
 							</div>
 						)}
 					</div>
