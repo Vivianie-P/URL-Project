@@ -10,7 +10,7 @@ function MainContent() {
 					<div className="img-container">
 						<img src={MainIllustration} alt="illustration" className="main-img" />
 					</div>
-					<div class="full-content">
+					<div className="full-content">
 						<h1 className="mc-title">More than just shorter links</h1>
 						<p className="main-ppg">
 							{" "}

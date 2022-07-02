@@ -14,7 +14,6 @@ function LowerLevelContent() {
 					statistics dashboard.
 				</p>
 				<div className="ppg-container">
-					<div className="desktop-img"></div>
 					<div className="first-ppg">
 						<img className="first-ppg-img" src={BrandRecognition} alt="" />
 						<h1 className="ppg-title">Brand Recognition</h1>
@@ -23,6 +22,7 @@ function LowerLevelContent() {
 							thing. Branded links help instil confidence in your content.
 						</p>
 					</div>
+					<div className="desktop-img"></div>
 					<div className="second-ppg">
 						<div className="upper-img"></div>
 						<img className="second-ppg-img" src={DetailedRecords} alt="" />
@@ -32,6 +32,7 @@ function LowerLevelContent() {
 							people engage with your content helps inform better decisions.
 						</p>
 					</div>
+					<div className="desktop-img"></div>
 					<div className="third-ppg">
 						<div className="upper-img"></div>
 						<img className="third-ppg-img" src={Customizable} alt="" />

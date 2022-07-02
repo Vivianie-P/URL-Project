@@ -100,11 +100,9 @@
 
 	.desktop-img {
 		display: flex;
-		position: absolute;
-		top: 48%;
-		right: 380px;
 		height: 0.7rem;
-		width: 40%;
+		align-self: center;
+		width: 10%;
 		background-color: hsl(180, 66%, 49%);
 	}
 
