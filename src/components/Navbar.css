@@ -105,19 +105,20 @@
 		flex-direction: row;
 	}
 
-	.nav-text a,
-	.nav-text-primary a {
+	.nav-text,
+	.nav-text-primary {
 		margin-top: 2rem;
 		font-size: 1.3rem;
 		color: hsl(0, 0%, 75%);
 	}
 
-	.nav-text a {
-		margin-left: 23rem;
+	.nav-text {
+		margin-left: 26%;
 		margin-right: 2rem;
 	}
 
 	.nav-link {
+		width: 15%;
 		margin-top: 2rem;
 	}
 
