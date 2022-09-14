@@ -2,7 +2,6 @@ import "./Navbar.css";
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
-import { Link } from "react-router-dom";
 import { NavbarData } from "./NavbarData";
 
 const Navbar = () => {
@@ -17,17 +16,15 @@ const Navbar = () => {
 						{NavbarData.map((item, index) => {
 							return (
 								<li key={index} className={item.cName}>
-									<Link to={item.path}>
-										<span>{item.title}</span>
-									</Link>
+									<span>{item.title}</span>
 								</li>
 							);
 						})}
 					</ul>
 				</nav>
-				<Link to="#" className="menu-bars">
+				<div className="menu-bars">
 					<FontAwesomeIcon icon={faBars} onClick={showSidebar} />
-				</Link>
+				</div>
 			</div>
 
 			<div className="menu-container">
@@ -36,9 +33,7 @@ const Navbar = () => {
 						{NavbarData.map((item, index) => {
 							return (
 								<li key={index} className={item.cName}>
-									<Link to={item.path}>
-										<span>{item.title}</span>
-									</Link>
+									<span>{item.title}</span>
 								</li>
 							);
 						})}

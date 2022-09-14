@@ -84,21 +84,23 @@ function Shortener() {
 			</form>
 
 			<div className="full-links">
-				{links.map((link) => (
-					<div className="link">
-						<div className="original-link">
-							<h3>{link.original_link}</h3>
-						</div>
-						<div className="shortened-link-and-btn">
-							<a className="shortened-link" href={link.full_short_link}>
-								{link.full_short_link}
-							</a>
-							<button onClick={handleCopy} className="copy-btn">
-								{copyButtonText}
-							</button>
-						</div>
-					</div>
-				))}
+				{links.length > 0
+					? links.map((link) => (
+							<div className="link">
+								<div className="original-link">
+									<h3>{link.original_link}</h3>
+								</div>
+								<div className="shortened-link-and-btn">
+									<a className="shortened-link" href={link.full_short_link}>
+										{link.full_short_link}
+									</a>
+									<button onClick={handleCopy} className="copy-btn">
+										{copyButtonText}
+									</button>
+								</div>
+							</div>
+					  ))
+					: null}
 			</div>
 		</div>
 	);

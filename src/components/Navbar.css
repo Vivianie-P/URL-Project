@@ -56,14 +56,13 @@
 	background-color: hsl(257, 27%, 26%);
 }
 
-.nav-text a,
-.nav-text-primary a {
+.nav-text,
+.nav-text-primary {
 	font-family: "Poppins", sans-serif;
 	font-weight: 700;
 	color: white;
 	text-decoration: none;
 	font-size: 1.125rem;
-	width: 50%;
 	height: 100%;
 	display: flex;
 	align-items: center;
@@ -71,13 +70,13 @@
 	border-radius: 4px;
 }
 
-.nav-link a {
+.nav-link {
 	padding: 1em 1.5em;
 	text-decoration: none;
 	text-transform: uppercase;
 	background-color: hsl(180, 66%, 49%);
 	/* background-size: 100% auto; */
-	width: 100%;
+	width: 50%;
 	border-radius: 2rem;
 	font-family: "Poppins", sans-serif;
 	font-weight: 700;
@@ -89,6 +88,7 @@
 	align-items: center;
 	flex-direction: column;
 	justify-content: space-evenly;
+	text-align: center;
 	padding: 0;
 	width: 100%;
 	list-style-type: none;
