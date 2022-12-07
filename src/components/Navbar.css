@@ -100,14 +100,21 @@
 		width: 100%;
 	}
 
+	.navbar {
+		height: 0;
+	}
+
+	.navbar-logo {
+		margin: 0 auto;
+	}
+
 	.nav-menu-items {
-		justify-content: flex-start;
 		flex-direction: row;
+		margin: 0;
 	}
 
 	.nav-text,
 	.nav-text-primary {
-		margin-top: 2rem;
 		font-size: 1.3rem;
 		color: hsl(0, 0%, 75%);
 	}
@@ -119,7 +126,6 @@
 
 	.nav-link {
 		width: 15%;
-		margin-top: 2rem;
 	}
 
 	.nav-text-primary a :hover,
