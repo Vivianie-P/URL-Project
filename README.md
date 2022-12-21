@@ -8,11 +8,11 @@
 A web app for shortening URL links
 
 ### Built with
--React
+- React
 
--JavaScript
+- JavaScript
 
--CSS
+- CSS
 
 ## Learn More
 
