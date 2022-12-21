@@ -1,4 +1,4 @@
-# Shortly--URL Shortening App
+# Shortly-URL Shortening App
 
 ![URL](https://user-images.githubusercontent.com/81881081/208990642-a099fe89-4c57-4e04-b32d-16c2f11cf8b1.jpg)
 
