@@ -1,6 +1,7 @@
-# Getting Started with Create React App
+# Shortly--URL Shortening App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![URL](https://user-images.githubusercontent.com/81881081/208990642-a099fe89-4c57-4e04-b32d-16c2f11cf8b1.jpg)
+
 
 ## Available Scripts
 
